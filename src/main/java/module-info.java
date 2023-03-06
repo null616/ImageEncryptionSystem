@@ -9,4 +9,5 @@ module ImageEncryptionSystem {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires org.kordamp.ikonli.core;
+    requires com.dlsc.formsfx;
 }

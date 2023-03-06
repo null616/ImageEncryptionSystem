@@ -5,6 +5,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.controlsfx.control.ToggleSwitch;
 
 import java.io.File;
 
@@ -16,14 +17,6 @@ public class View extends AnchorPane {
     private final ViewModel viewModel=new ViewModel();
 
     public View() {
-        createView();
-        bindViewModel();
-    }
-
-    private void bindViewModel() {
-    }
-
-    private void createView() {
         setStyle("-fx-background-color: #f0f0f0");
 
         TabPane tabPane=new TabPane();
@@ -35,14 +28,6 @@ public class View extends AnchorPane {
         tabPane.getTabs().addAll(commonTab,seniorTab,optionTab,notesTab);
 
 
-        setTabs(commonTab, seniorTab, optionTab, notesTab);
-
-        Button onBtn=new Button("确定"),cancelBtn=new Button("取消"),previewPictureBtn=new Button("预览图片");
-        getChildren().addAll(tabPane,onBtn,cancelBtn,previewPictureBtn);
-
-        setAnchorPane(tabPane, onBtn, cancelBtn, previewPictureBtn);
-    }
-    private void setTabs(Tab commonTab, Tab seniorTab, Tab optionTab, Tab notesTab) {
         AnchorPane commonAnchorPane=new AnchorPane(),seniorAnchorPane=new AnchorPane(),optionAnchorPane=new AnchorPane(), noteAnchorPane=new AnchorPane();
         commonTab.setContent(commonAnchorPane);
         seniorTab.setContent(seniorAnchorPane);
@@ -50,7 +35,27 @@ public class View extends AnchorPane {
         notesTab.setContent(noteAnchorPane);
         setCommonTab(commonAnchorPane);
         setNoteTab(noteAnchorPane);
+
+        Button onBtn=new Button("确定"),cancelBtn=new Button("取消"),previewPictureBtn=new Button("预览图片");
+        getChildren().addAll(tabPane,onBtn,cancelBtn,previewPictureBtn);
+
+        AnchorPane.setLeftAnchor(tabPane,10.0);
+        AnchorPane.setTopAnchor(tabPane,10.0);
+        AnchorPane.setRightAnchor(tabPane,10.0);
+        AnchorPane.setBottomAnchor(tabPane,50.0);
+        AnchorPane.setBottomAnchor(onBtn,10.0);
+        AnchorPane.setBottomAnchor(cancelBtn,10.0);
+        AnchorPane.setBottomAnchor(previewPictureBtn,10.0);
+        AnchorPane.setRightAnchor(onBtn,130.0);
+        AnchorPane.setRightAnchor(cancelBtn,80.0);
+        AnchorPane.setRightAnchor(previewPictureBtn,10.0);
+
+        bindViewModel();
     }
+
+    private void bindViewModel() {
+    }
+
     private void setCommonTab(AnchorPane commonAnchorPane) {
         Label label1=new Label("要处理的图片"),label2=new Label("图片保存的位置"),label3=new Label("新图片格式"),
                 label4=new Label("处理方式"),label5=new Label("输入密码"),label6=new Label("加密/解密");
@@ -70,12 +75,11 @@ public class View extends AnchorPane {
         choiceBox1.getSelectionModel().selectFirst();
         choiceBox2.getItems().addAll("像素级别","位级别","块级别");
         choiceBox2.getSelectionModel().selectFirst();
-        ToggleButton toggleButton=new ToggleButton("加密");
-
+        ToggleSwitch toggleSwitch=new ToggleSwitch("加密");
 
 
         commonAnchorPane.getChildren().addAll(label1, label2,label3,label4,label5,label6,textField1,textField2,passwordField,
-                button1,button2,choiceBox1,choiceBox2,toggleButton);
+                button1,button2,choiceBox1,choiceBox2,toggleSwitch);
         AnchorPane.setLeftAnchor(label1,10.0);
         AnchorPane.setTopAnchor(label1,10.0);
         AnchorPane.setLeftAnchor(textField1,10.0);
@@ -102,14 +106,14 @@ public class View extends AnchorPane {
 
         AnchorPane.setRightAnchor(label6,10.0);
         AnchorPane.setTopAnchor(label6,160.0);
-        AnchorPane.setRightAnchor(toggleButton,10.0);
-        AnchorPane.setTopAnchor(toggleButton,190.0);
+        AnchorPane.setRightAnchor(toggleSwitch,10.0);
+        AnchorPane.setTopAnchor(toggleSwitch,190.0);
 
         AnchorPane.setLeftAnchor(label5,10.0);
         AnchorPane.setTopAnchor(label5,220.0);
         AnchorPane.setLeftAnchor(passwordField,10.0);
         AnchorPane.setTopAnchor(passwordField,250.0);
-        toggleButton.selectedProperty().addListener((observableValue, oldValue, newValue) -> toggleButton.setText(newValue?"解密":"加密"));
+        toggleSwitch.selectedProperty().addListener((observableValue, oldValue, newValue) -> toggleSwitch.setText(newValue?"解密":"加密"));
 
     }
 
@@ -166,17 +170,5 @@ public class View extends AnchorPane {
             }
         });
         textField.textProperty().addListener((observableValue, oldValue, newValue) -> textArea.setDisable(!newValue.isEmpty()));
-    }
-    private void setAnchorPane(TabPane tabPane, Button onBtn, Button cancelBtn, Button previewPictureBtn) {
-        AnchorPane.setLeftAnchor(tabPane,10.0);
-        AnchorPane.setTopAnchor(tabPane,10.0);
-        AnchorPane.setRightAnchor(tabPane,10.0);
-        AnchorPane.setBottomAnchor(tabPane,50.0);
-        AnchorPane.setBottomAnchor(onBtn,10.0);
-        AnchorPane.setBottomAnchor(cancelBtn,10.0);
-        AnchorPane.setBottomAnchor(previewPictureBtn,10.0);
-        AnchorPane.setRightAnchor(onBtn,130.0);
-        AnchorPane.setRightAnchor(cancelBtn,80.0);
-        AnchorPane.setRightAnchor(previewPictureBtn,10.0);
     }
 }
