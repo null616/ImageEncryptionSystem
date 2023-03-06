@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+    class MainApplication{
+        {static} + main(String[] args):void
+        + start(Stage stage):void
+    }
+    class View{
+
+    }
+    class ViewModel{
+    }
+    class Model{
+        + void save(Data data)
+    }
+    entity Data{
+    }
+    class DataConverter{
+    }
+    MainApplication --> View #line.dashed : 《实例化》
+    View --> ViewModel : 绑定和命令
+    ViewModel --> Model : + 为提供持久性
+    ViewModel --> DataConverter : + 转换为 \n 委派给
+@enduml

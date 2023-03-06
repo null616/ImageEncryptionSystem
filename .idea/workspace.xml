@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb97684a-1fd8-4165-831c-ae575d93155a" name="变更" comment="前端页面到注释Tab部分">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/jlu/csw/front/static/mycss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="cb97684a-1fd8-4165-831c-ae575d93155a" name="变更" comment="前端页面到常规Tab部分">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/DataConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/ViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/MainApplication.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/jlu/csw/front/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +26,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
         <option value="CSS File" />
+        <option value="UML Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,6 +77,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Class",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -92,7 +95,7 @@
     "project.structure.last.edited": "问题",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -147,7 +150,11 @@
       <workItem from="1676284566893" duration="277000" />
       <workItem from="1676284851442" duration="3239000" />
       <workItem from="1676288436098" duration="682000" />
-      <workItem from="1676289141696" duration="3101000" />
+      <workItem from="1676289141696" duration="6740000" />
+      <workItem from="1676305496048" duration="3761000" />
+      <workItem from="1676358587578" duration="720000" />
+      <workItem from="1676546820996" duration="599000" />
+      <workItem from="1678069827630" duration="3780000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1675694260952</created>
@@ -170,7 +177,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676132489188</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="前端页面到常规Tab部分">
+      <created>1676300958239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676300958239</updated>
+    </task>
+    <task id="LOCAL-00005" summary="前端页面到常规Tab部分">
+      <created>1676301137676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676301137676</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +212,7 @@
     <MESSAGE value="项目初始化" />
     <MESSAGE value="项目重构" />
     <MESSAGE value="前端页面到注释Tab部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端页面到注释Tab部分" />
+    <MESSAGE value="前端页面到常规Tab部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端页面到常规Tab部分" />
   </component>
 </project>
